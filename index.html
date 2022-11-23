@@ -2,29 +2,34 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="password generator">
-    <title>password generator</title>
+    <meta name="keywords" content="Password generator">
 
     <link rel="stylesheet" href="style.css">
-
+    <title>Password generator</title>
 </head>
 
 <body>
 
-    <img class-"logo" src="./assets/logo.webp" alt-"password generator" />
+    <img class="logo" src="./assets/logo.webp" alt="Password generator logo" />
 
-    <main class="container-input">
-        <span>size <span id-"valor"></span> characters</span>
-        <input id-"slider" class="slider" type="range" min="7" max="30" value="15" />
-    </main>
+    <div class="container-input">
+        <span>Size <span id="valor"></span> characters</span>
+        <input id="slider" class="slider" type="range" min="7" max="27" value="17" />
 
-    <div id="container-password" class="container-password hide">
-        <span class="title">your generated password is:</span>
-        <span class="password" class="password">12Ab45U87d</span>
-        <span>Click on password to copy.👆</span>
+        <button id="button" class="button-cta" onclick="generatePassword()">generate password</button>
+    </div>
+
+    <div id="container-password" onclick="copyPassword()" class="container-password hide">
+        <span class="title">Your password was:</span>
+        <span id="password" class="password"></span>
+        <span class="tooltip">Click on the password to copy. 👆</span>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
