@@ -2,11 +2,11 @@
     margin: 0 auto;
     width: 100%;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    background-color: #18181B;
+    background-color: #0b0b0c;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -16,8 +16,8 @@ body {
 }
 
 .logo {
-    max-width: 600px;
-    margin-bottom: 24px;
+    max-width: 500px;
+    margin-bottom: 30px;
 }
 
 .container-input {
@@ -26,28 +26,28 @@ body {
 }
 
 .container-input span {
-    color: #FFF;
-    font-size: 22px;
+    color: #e4dede;
+    font-size: 25px;
 }
 
 .slider {
     margin-top: 8px;
     -webkit-appearance: none;
     width: 100%;
-    height: 18px;
-    border-radius: 5px;
-    background: #DFDFDF;
+    height: 20px;
+    border-radius: 6px;
+    background: #e4dede;
     outline: none;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .button-cta {
-    height: 40px;
-    margin-top: 40px;
-    background-color: #3EB72B;
+    height: 45px;
+    margin-top: 45px;
+    background-color: #2ce510;
     border: 0;
     border-radius: 4px;
-    color: #FFF;
+    color: rgb(11, 11, 11);
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
@@ -72,15 +72,14 @@ body {
 
 .password {
     height: 60px;
-    background-color: rgba(0, 0, 0, 0.40);
-    border: 1px solid #313131;
-
+    background-color: rgba(0, 0, 0, 0.50);
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #FFF;
-    border-radius: 4px;
-    transition: transform 0.5s;
+    border: 1px solid #313131;
+    transition: transform 0.7s;
 }
 
 .password:hover {
@@ -102,7 +101,7 @@ body {
     background: rgb(15, 15, 15);
     opacity: 0;
     visibility: hidden;
-    transition: all .5s ease-in-out;
+    transition: all .7s ease-in-out;
     text-align: center;
 }
 
