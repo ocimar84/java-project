@@ -7,27 +7,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Password generator">
-
+    <!-- Add link for style -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Password generator</title>
 </head>
 
 <body>
-
+    <!-- Logo image -->
     <img class="logo" src="./assets/logo.webp" alt="Password generator logo">
-
+    <!-- Slider -->
     <div class="container-input">
         <span>Size <span id="valor"></span> characters</span>
         <input id="slider" class="slider" type="range" min="7" max="27" value="17">
 
-        <button id="button" class="button-cta" onclick="generatePassword()">generate password</button>
+
+
+
+
     </div>
+
+    <!-- Check box social media -->
+    <div id="ckeck-boxes">
+        <input class="check" id="facebook" type="checkbox">
+        <label for="facebook">Facebook</label><br>
+        <input class="check" id="instagram" type="checkbox">
+        <label for="instagram">Instagram</label><br>
+        <input class="check" id="twitter" type="checkbox">
+        <label for="twitter">Twitter</label>
+
+        <!-- Button generation password -->
+    </div>
+    <button id="button" class="button-cta" onclick="generatePassword()">generate password</button>
 
     <div id="container-password" onclick="copyPassword()" class="container-password hide">
         <span class="title">Your password:</span>
-        <span id="password" class="password">zxcvbnmasdfg1234564879</span>
+        <textarea id="password" class="password">zxcvbnmasdfg1234564879</textarea>
         <span class="tooltip">Click on the password to copy. 👆</span>
     </div>
+
+    <!-- Link for java -->
+    <div id="history" style="color: aliceblue ;"></div>
 
     <script src="./assets/js/script.js"></script>
 </body>

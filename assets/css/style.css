@@ -43,7 +43,7 @@ body {
 
 .button-cta {
     height: 45px;
-    margin-top: 45px;
+    margin-top: 14px;
     background-color: #2ce510;
     border: 0;
     border-radius: 4px;
@@ -51,6 +51,7 @@ body {
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
+    max-width: 480px;
 }
 
 .container-password {
@@ -109,4 +110,36 @@ body {
     bottom: 50px;
     visibility: visible;
     opacity: 1;
+}
+
+/* social media style*/
+#ckeck-boxes label {
+    color: white;
+    display: inline;
+    width: auto;
+}
+
+#ckeck-boxes .check {
+    display: inline;
+    width: auto;
+}
+
+#ckeck-boxes {
+    display: inline-block;
+    width: auto;
+}
+
+/**************************/
+
+textarea {
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    height: auto;
+    resize: none;
+}
+
+#history {
+    margin-top: 50px;
+    text-align: center;
 }

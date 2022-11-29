@@ -1,3 +1,5 @@
+//********************************************** */
+
 let sliderElement = document.querySelector("#slider");
 let buttonElement = document.querySelector("#button");
 
@@ -15,6 +17,7 @@ slider.oninput = function () {
     sizePassword.innerHTML = this.value;
 }
 
+//Add function generate Password */
 
 function generatePassword() {
 
@@ -28,8 +31,22 @@ function generatePassword() {
     password.innerHTML = pass;
     newpassword = pass;
 }
+//Add function copy password */
 
 function copyPassword() {
     alert("Password successfully copied!")
     navigator.clipboard.writeText(newpassword);
+}
+
+//Add localstorage/
+
+
+h2 = document.getElementById("history");
+
+h2.innerHTML = localStorage.getItem("value");
+input.addEventListener("click", display);
+
+function display() {
+    localStorage.setItem("value", input.value);
+    h2.innerHTML = localStorage.getItem("value");
 }
