@@ -16,10 +16,10 @@ body {
 }
 
 .logo {
-    float: leftcente;
+
     width: 100%;
     max-width: 500px;
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
     text-align: center;
     padding: 35px 15px;
 }
