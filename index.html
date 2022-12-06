@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,41 +13,43 @@
 
 <body>
     <!-- Logo image -->
-    <img class="logo" src="./assets/logo.webp" alt="Password generator logo">
+    <header class="conteiner">
+        <div class="logo">
+            <img src="./assets/logo.webp" alt="Password generator logo">
+        </div>
+    </header>
+
     <!-- Slider -->
     <div class="container-input">
-        <span>Size <span id="valor"></span> characters</span>
+        <span>Size <span id="size"></span> characters</span>
         <input id="slider" class="slider" type="range" min="7" max="27" value="17">
-
-
-
-
-
     </div>
 
     <!-- Check box social media -->
     <div id="ckeck-boxes">
-        <input class="check" id="facebook" type="checkbox">
+        <input name="check" class="check" id="facebook" type="radio">
         <label for="facebook">Facebook</label><br>
-        <input class="check" id="instagram" type="checkbox">
+        <input name="check" class="check" id="instagram" type="radio">
         <label for="instagram">Instagram</label><br>
-        <input class="check" id="twitter" type="checkbox">
+        <input name="check" class="check" id="twitter" type="radio">
         <label for="twitter">Twitter</label>
-
-        <!-- Button generation password -->
     </div>
-    <button id="button" class="button-cta" onclick="generatePassword()">generate password</button>
 
-    <div id="container-password" onclick="copyPassword()" class="container-password hide">
+    <!-- Button generation password -->
+    <button id="button" class="button-cta" onclick="generatePassword()">Generate password</button>
+    <div id="container-password" onclick="copyPassword(newpassword);" class="container-password hide">
         <span class="title">Your password:</span>
-        <textarea id="password" class="password">zxcvbnmasdfg1234564879</textarea>
-        <span class="tooltip">Click on the password to copy. 👆</span>
+        <textarea id="password" class="password"></textarea>
+        <span class="tooltip">Click on the password to copy. :puntare_su_2:</span>
     </div>
 
-    <!-- Link for java -->
-    <div id="history" style="color: aliceblue ;"></div>
-
-    <script src="./assets/js/script.js"></script>
+    <div>
+        <!-- List of secrets -->
+        <div id="history" style="color: aliceblue;"></div>
+    </div>
+    <!-- Add fontawesome -->
+    <script src="https://kit.fontawesome.com/481ffab01d.js" crossorigin="anonymous"></script>
+    <script src="./assets/javascript/script.js"></script>
 </body>
 
 </html>
