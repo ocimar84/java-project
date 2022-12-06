@@ -1,4 +1,4 @@
-* {
+* * {
     margin: 0 auto;
     width: 100%;
     box-sizing: border-box;
@@ -16,8 +16,12 @@ body {
 }
 
 .logo {
+    float: leftcente;
+    width: 100%;
     max-width: 500px;
     margin-bottom: 30px;
+    text-align: center;
+    padding: 35px 15px;
 }
 
 .container-input {
@@ -42,6 +46,7 @@ body {
 }
 
 .button-cta {
+    padding: 10px 15px;
     height: 45px;
     margin-top: 14px;
     background-color: #2ce510;
@@ -142,4 +147,34 @@ textarea {
 #history {
     margin-top: 50px;
     text-align: center;
+
+}
+
+.line {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 10px;
+    max-width: 400px;
+    background-color: #161616;
+    margin: 5px auto;
+    color: #2CE510;
+}
+
+.line p {
+    font-size: 16px;
+}
+
+.line i {
+    color: aqua;
+}
+
+.line .icon {
+    width: 25px;
+}
+
+.line .controls {
+    display: flex;
+    width: 50px;
+    gap: 10px;
 }
