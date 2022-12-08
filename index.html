@@ -19,33 +19,44 @@
         </div>
     </header>
 
-    <!-- Slider -->
+    <!-- input -->
     <div class="container-input">
-        <span>Size <span id="size"></span> characters</span>
-        <input id="slider" class="slider" type="range" min="7" max="27" value="17">
+        <h1>1. <span class="text-white" SET PASSWORD LENGTH:</span></span></h1>
+
+        <!-- Slider -->
+        <div class="indent columns">
+            <input id="slider" class="slider" type="range" min="7" max="27" value="17">
+            <span></span id="size"></span> characters</span>
+        </div>
+
+        <!-- Check box social media -->
+        <h1>2. <span class="text-white">NAME PASSWORD:</span></h1>
+        <div class="indent">
+            <div id="error" class="error hide">Error: <span id="error-message"></span>c/div>
+                <div id="ckeck-boxes"></div>
+                <input name="check" class="check" id="facebook" type="radio">
+                <label for="facebook">Facebook</label><br>
+                <input name="check" class="check" id="instagram" type="radio">
+                <label for="facebook">instragam</label><br>
+                <input name="check" class="check" id="twitter" type="radio">
+                <label for="twitter">Twitter</labels>
+            </div>
+        </div>
+
+        <!-- Button generation password -->
+        <h1>3. <span class="text-white">CREATE PASSWORD: </span></h1>
+        <div class="indent">
+            <button id="button" class="button-cta" onclick="generatePassword()">Generate password</button>
+        </div>
+        <div id="container-password" onclick="copyPassword(newpassword);" class="container-password hide">
+            <span class="title">Your password:</span>
+            <textarea id="password" class="password"></textarea>
+            <span class="tooltip">Click on the password to copy. :puntare_su_2:</span>
+        </div>
     </div>
 
-    <!-- Check box social media -->
-    <div id="ckeck-boxes">
-        <input name="check" class="check" id="facebook" type="radio">
-        <label for="facebook">Facebook</label><br>
-        <input name="check" class="check" id="instagram" type="radio">
-        <label for="instagram">Instagram</label><br>
-        <input name="check" class="check" id="twitter" type="radio">
-        <label for="twitter">Twitter</label>
-    </div>
-
-    <!-- Button generation password -->
-    <button id="button" class="button-cta" onclick="generatePassword()">Generate password</button>
-    <div id="container-password" onclick="copyPassword(newpassword);" class="container-password hide">
-        <span class="title">Your password:</span>
-        <textarea id="password" class="password"></textarea>
-        <span class="tooltip">Click on the password to copy. :puntare_su_2:</span>
-    </div>
-
-    <div>
-        <!-- List of secrets -->
-        <div id="history" style="color: aliceblue;"></div>
+    <!-- List of secrets -->
+    <div id="history" style="color: aliceblue;"></div>
     </div>
     <!-- Add fontawesome -->
     <script src="https://kit.fontawesome.com/481ffab01d.js" crossorigin="anonymous"></script>
