@@ -13,6 +13,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 0 5vw;
 }
 
 .logo {
@@ -155,7 +156,7 @@ textarea {
     justify-content: space-between;
     padding: 10px;
     gap: 10px;
-    max-width: 400px;
+    max-width: 486px;
     background-color: #161616;
     margin: 5px auto;
     color: #2CE510;
@@ -177,4 +178,15 @@ textarea {
     display: flex;
     width: 50px;
     gap: 10px;
+}
+
+/**Fix Screen work best***/
+@media screen and (max-width: 500px; ) {
+    .button-cta {
+        width: calc(100% - 28px);
+    }
+
+    .container-input {
+        width: calc(100% - 28px);
+    }
 }
