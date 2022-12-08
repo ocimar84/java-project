@@ -190,3 +190,27 @@ textarea {
         width: calc(100% - 28px);
     }
 }
+
+h1 {
+    color: #2CE510;
+    margin: 30px 0 10px;
+}
+
+h1:first-of-type {
+    margin-top: 10px;
+}
+
+h1 span {
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.indent {
+    margin-left: 35px;
+}
+
+.columns {
+    display: flex;
+    column-gap: 15px;
+}
