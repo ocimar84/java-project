@@ -17,18 +17,42 @@ slider.oninput = function () {
     sizePassword.innerHTML = this.value;
 }
 
+/**
+ * Funtion to uncheck name radio buttons and clear out name text fiel
+ */
+
+
+function cleanUpForNewInput() {
+    let list = JSON.parse(window.localStorage.getItem('list')) || [];
+    // see if we have passwords to show or not
+    if (list.length > 0) {
+        containerPassword.classList.remove('hide');
+    } else {
+        containerPassword.classList.add('hide');
+    }
+    // make sure inputs are not checked and are empty
+    document.getElementById('own-name').value = "";
+    for (const button of document.querySelectorAll('input[name="check"]')) {
+        button.checked = false;
+    }
+}
+
 //Add function generate Password */
 function generatePassword() {
-    let pass = '';
-    for (let i = 0, n = charset.length; i < sliderElement.value; ++i) {
-        pass += charset.charAt(Math.floor(Math.random() * n));
+    if (inputsValid()) {
+        let pass = '';
+        for (let i = 0, n = charset.length; i < sliderElement.value; ++i) {
+            pass += charset.charAt(Math.floor(Math.random() * n));
+        }
+
+        containerPassword.classList.remove("hide");
+        password.innerHTML = pass;
+        newpassword = pass;
+
+        addPassword();
+        cleanUpForNewInput();
     }
 
-    containerPassword.classList.remove("hide");
-    password.innerHTML = pass;
-    newpassword = pass;
-
-    addPassword();
 }
 
 //Add function copy password */
@@ -59,6 +83,8 @@ function addPassword() {
         item.label = 'twitter';
     } else if (instagram.checked) {
         item.label = 'instagram';
+    } else {
+        item.label = document.getElementById('own-name').value;
     }
 
     list.push(item);
@@ -123,6 +149,10 @@ function showPassword(item) {
         let instagramIcon = document.createElement('span');
         instagramIcon.innerHTML = `<i class="icon fa-brands fa-square-instagram"></i>`;
         passwordDiv.appendChild(instagramIcon);
+    } else {
+        let instagramIcon = document.createElement('span');
+        instagramIcon.innerHTML = `${item.label}`;
+        passwordDiv.appendChild(instagramIcon);
     }
 
     passwordDiv.appendChild(keyDiv);
@@ -159,3 +189,48 @@ function listPassword() {
 }
 
 listPassword();
+
+/**
+ * Function to make sure password name is unique and not empty
+ * @returns Boolean: true if inputs are valid and name is unique
+ */
+function inputsValid() {
+    const errorElement = document.getElementById('error');
+    const errorMessageElement = document.getElementById('error-message');
+    let list = JSON.parse(window.localStorage.getItem('list')) || [];
+
+    let label = ''
+    if (facebook.checked) {
+        label = 'facebook';
+    } else if (twitter.checked) {
+        label = 'twitter';
+    } else if (instagram.checked) {
+        label = 'instagram';
+    } else {
+        label = document.getElementById('own-name').value;
+    }
+    let error_message = '';
+    // make sure label isn't blank
+    if (label.length === 0) {
+        error_message = 'Password Name cannot be blank.'
+    }
+
+    // make sure label isn't aready in list
+    for (const item of list) {
+        if (item.label === label) {
+            error_message = 'Password Name must be unique.'
+        }
+    }
+
+    // see if we have an error
+
+    if (error_message.length > 0) {
+        errorElement.classList.remove('hide');
+        errorMessageElement.innerHTML = error_message;
+        return false
+    } else {
+        // all good, add the item
+        errorElement.classList.add('hide');
+        return true;
+    }
+}

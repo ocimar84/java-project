@@ -181,7 +181,7 @@ textarea {
 }
 
 /**Fix Screen work best***/
-@media screen and (max-width: 500px; ) {
+@media screen and (max-width: 500px) {
     .button-cta {
         width: calc(100% - 28px);
     }
