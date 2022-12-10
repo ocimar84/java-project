@@ -13,7 +13,6 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 0 5vw;
 }
 
 .logo {
@@ -38,12 +37,26 @@ body {
 .slider {
     margin-top: 8px;
     -webkit-appearance: none;
-    width: 100%;
+    width: auto;
     height: 20px;
     border-radius: 6px;
     background: #e4dede;
     outline: none;
     opacity: 0.8;
+}
+
+#size {
+    width: 25px;
+}
+
+.columns span.label {
+    max-width: 175px;
+}
+
+#error,
+#error * {
+    color: red;
+    font-size: 18px;
 }
 
 .button-cta {
@@ -103,13 +116,15 @@ body {
     position: relative;
     top: 20px;
     padding: 6px 8px;
-    font-size: 16px;
-    border-radius: 6px;
-    background: rgb(15, 15, 15);
-    opacity: 0;
-    visibility: hidden;
-    transition: all .7s ease-in-out;
-    text-align: center;
+}
+
+font-size: 16px;
+border-radius: 6px;
+background: rgb(15, 15, 15);
+opacity: 0;
+visibility: hidden;
+transition: all .7s ease-in-out;
+text-align: center;
 }
 
 .container-password:hover .tooltip {
@@ -162,6 +177,54 @@ textarea {
     color: #2CE510;
 }
 
+h1 {
+    color: #2CE510;
+    margin: 30px 0 10px;
+}
+
+h1:first-of-type {
+    margin-top: 10px;
+}
+
+h1 span {
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+
+input[type=text] {
+    min-height: 40px;
+    height: auto;
+    color: #000;
+    box-sizing: border-box;
+    padding: 0 15px;
+    font-size: 14px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    letter-spacing: 0.3px;
+    line-height: 1.8rem;
+    cursor: pointer;
+    border-radius: 6px;
+    width: calc(100% - 28px);
+}
+
+.text-green {
+    color: #2CE510 !important;
+}
+
+.indent {
+    margin-left: 35px;
+}
+
+.columns {
+    display: flex;
+    column-gap: 10px;
+}
+
+
+/* password table */
 .line p {
     font-size: 16px;
 }
@@ -180,7 +243,6 @@ textarea {
     gap: 10px;
 }
 
-/**Fix Screen work best***/
 @media screen and (max-width: 500px) {
     .button-cta {
         width: calc(100% - 28px);
@@ -188,29 +250,10 @@ textarea {
 
     .container-input {
         width: calc(100% - 28px);
+
     }
-}
 
-h1 {
-    color: #2CE510;
-    margin: 30px 0 10px;
-}
-
-h1:first-of-type {
-    margin-top: 10px;
-}
-
-h1 span {
-    color: white;
-    font-size: 14px;
-    text-transform: uppercase;
-}
-
-.indent {
-    margin-left: 35px;
-}
-
-.columns {
-    display: flex;
-    column-gap: 15px;
+    .indent {
+        max-width: calc(100% - 35px);
+    }
 }
