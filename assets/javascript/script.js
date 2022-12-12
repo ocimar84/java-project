@@ -1,13 +1,8 @@
-//********************************************** */
-
+/* jshint esversion: 6*/
 let sliderElement = document.querySelector("#slider");
-let buttonElement = document.querySelector("#button");
 let sizePassword = document.querySelector("#size");
-let password = document.querySelector("#password");
-let containerPassword = document.querySelector("#container-password");
 let charset = 'abcdefghijklmnopqrstubxwzABCDEFGHIJKLMNOPQRSTUVXZ!@123456789';
-let newpassword = '';
-let history = document.getElementById('history');
+let listHistory = document.getElementById('history');
 let facebook = document.getElementById('facebook');
 let instagram = document.getElementById('instagram');
 let twitter = document.getElementById('twitter');
@@ -15,21 +10,12 @@ let twitter = document.getElementById('twitter');
 sizePassword.innerHTML = sliderElement.value;
 slider.oninput = function () {
     sizePassword.innerHTML = this.value;
-}
+};
 
 /**
  * Funtion to uncheck name radio buttons and clear out name text fiel
  */
-
-
 function cleanUpForNewInput() {
-    let list = JSON.parse(window.localStorage.getItem('list')) || [];
-    // see if we have passwords to show or not
-    if (list.length > 0) {
-        containerPassword.classList.remove('hide');
-    } else {
-        containerPassword.classList.add('hide');
-    }
     // make sure inputs are not checked and are empty
     document.getElementById('own-name').value = "";
     for (const button of document.querySelectorAll('input[name="check"]')) {
@@ -45,22 +31,13 @@ function generatePassword() {
             pass += charset.charAt(Math.floor(Math.random() * n));
         }
 
-        containerPassword.classList.remove("hide");
-        password.innerHTML = pass;
-        newpassword = pass;
-
-        addPassword();
+        addPassword(pass);
         cleanUpForNewInput();
     }
-
 }
 
 //Add function copy password */
 function copyPassword(passwordValue) {
-    password.value = passwordValue;
-    password.select();
-    password.setSelectionRange(0, 99999);
-
     navigator.clipboard.writeText(passwordValue);
 
     alert(`Password ${passwordValue} successfully copied!`);
@@ -69,12 +46,12 @@ function copyPassword(passwordValue) {
 /**
  * Creates password
  */
-function addPassword() {
+function addPassword(password) {
     let list = JSON.parse(window.localStorage.getItem("list")) || [];
     let item = {
         'index': list.length,
         'label': 'generic',
-        'key': password.value
+        'key': password
     };
 
     if (facebook.checked) {
@@ -164,7 +141,7 @@ function showPassword(item) {
 
     passwordDiv.appendChild(controls);
 
-    history.prepend(passwordDiv);
+    listHistory.prepend(passwordDiv);
 }
 
 /**
@@ -173,7 +150,7 @@ function showPassword(item) {
 function listPassword() {
     let list = JSON.parse(window.localStorage.getItem("list")) || [];
 
-    history.innerHTML = '';
+    listHistory.innerHTML = '';
 
     for (let i = 0; i < list.length; i++) {
         let item = list[i];
@@ -199,7 +176,7 @@ function inputsValid() {
     const errorMessageElement = document.getElementById('error-message');
     let list = JSON.parse(window.localStorage.getItem('list')) || [];
 
-    let label = ''
+    let label = '';
     if (facebook.checked) {
         label = 'facebook';
     } else if (twitter.checked) {
@@ -212,13 +189,13 @@ function inputsValid() {
     let error_message = '';
     // make sure label isn't blank
     if (label.length === 0) {
-        error_message = 'Password Name cannot be blank.'
+        error_message = 'Password Name cannot be blank.';
     }
 
     // make sure label isn't aready in list
     for (const item of list) {
         if (item.label === label) {
-            error_message = 'Password Name must be unique.'
+            error_message = 'Password Name must be unique.';
         }
     }
 
@@ -227,7 +204,7 @@ function inputsValid() {
     if (error_message.length > 0) {
         errorElement.classList.remove('hide');
         errorMessageElement.innerHTML = error_message;
-        return false
+        return false;
     } else {
         // all good, add the item
         errorElement.classList.add('hide');

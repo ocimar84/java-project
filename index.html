@@ -7,15 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Password generator">
     <!-- Add link for style -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <title>Password generator</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
+    <noscript>
+        <h2>Javascript must be enabled to use this list.</h2>
+        <p><a href="https://www.google.com/search?q=enable+javascript" target="_blank">Click
+                Here</a> to search how to do this on your browser.</p>
+    </noscript>
+
     <!-- Logo image -->
     <header class="conteiner">
         <div class="logo">
-            <img src="./assets/logo.webp" alt="Password generator logo">
+            <img src="/assets/images/logo.webp" alt="Password generator logo">
         </div>
     </header>
 
@@ -54,11 +64,6 @@
         <h1>3. <span class="text-white">CREATE PASSWORD: </span></h1>
         <div class="indent">
             <button id="button" class="button-cta" onclick="generatePassword()">Generate password</button>
-        </div>
-        <div id="container-password" onclick="copyPassword(newpassword);" class="container-password hide">
-            <span class="title">Your password:</span>
-            <textarea id="password" class="password"></textarea>
-            <span class="tooltip">Click on the password to copy. :puntare_su_2:</span>
         </div>
     </div>
 
