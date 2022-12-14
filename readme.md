@@ -41,29 +41,61 @@
    <img src="./assets/readme/logoreadme.png"> 
  
 </ul> 
->As a First Time Visitor, I want to be able to discover content on the site with ease.
+
+>Slider
 <ul>
-    <li>The website's content and features are aesthetically displayed within the device's view port size.</li>
-    <li>To avoid having to scroll up each time a user wants to add a new list item, the input for generating list items has a position of sticky at the top.</li>
+    <li>Determines how many characters the user needs to password by simply setting by holding the button and pressing left for fewer characters or right for more. .</li>
+  <li>Works at least 7 maximum 27 characters.</li>
+   <img src="./assets/readme/setpassword.png"> 
+ 
 </ul> 
->As a Returning Visitor, I want to be able to easily make a to-do list.
+
+>Password options
 <ul>
-    <li>The inputs placeholder invites the user to add to the list by entering a new item.</li>
-    <li>There are only two steps required to generate a list item. Enter some text in the input field and then click the + sign-shaped add icon to the right of the field.</li>
-    <li>The user will be informed with an alert if the input is empty.</li>
+    <li>In order to identify the password that was generated if the user ever needs to go back and copy the password, the selected choice will generate either an icon or text next to the password.</li>
+    <img src="./assets/readme/Multiplos.png"> 
+    <li>Facebook </li>
+    <li>Instagram</li>
+    <li>Twitter</li>
+    <img src="./assets/readme/input.png">    
+    <li>Just type in the application used that the password will be randomly generated.</li>
+     <img src="./assets/readme/Box0.png">       
+    <li>User can choose by typing which password he needs through which site or tool needs password, just type choose how many characters the password will appear in the history with the name entered.</li>
+    <img src="./assets/readme/Box1.png">     
 </ul> 
->As a Returning Visitor, I need the ability to modify each to-do list.
+
+>Create Password.
 <ul>
-    <li>An edit, remove, and check button will be present next to each item on the to-do list.</li>
-    <li>By using the check button, the user may mark completed to-do items and change their appearance.</li>
-    <li>The to-do item can be taken off the list using the remove button.</li>
-    <li>The user can retype their task by clicking the Edit button.</li>
+    <li>Simply click the Generate password button where the options previously selected will be randomly generated according to the user's need.</li>
+    <img src="./assets/readme/Createpassword.png">        
+    <li>By selecting GENERATE PASSWORD, the password will be created and saved in local storage as well as displayed in the history div. If the user were to leave the website, their password would still be available in case they ever forgot it.</li> 
 </ul> 
->As a Returning Visitor, I want to have the option to modify the color scheme to something I prefer.
+
+>Generate Password.
 <ul>
-    <li>The user is given access to a theme button that, when pressed, brings up a popup menu with choices for customizing the font style and color scheme.</li>
+    <li>After clicking on the button to generate password your password will be in the middle with the number of characters that was selected, each created password will have icons that allow you to copy, regenerate, or delete the password.</li>
+    <img src="./assets/readme/Password.png">        
+    <li>You can see that on the left side it is specifying with the logo of which social media the password was created, in the example below Facebook</li> 
+    <img src="./assets/readme/facebook.png">
+    <li>In the center we will have the user's password.</li> 
+    <img src="./assets/readme/password1.png">
+    <li>On the right side we have 3 options:</li>
+    <img src="./assets/readme/tools.png">
+    <li>Copy - Its own name says it copies the password and generates a window confirming the command.</li>  
+    <img src="./assets/readme/copy.png">
+    <li>Refresh - Generates a new password if you are not satisfied with the generated password.
+</li>  
+    <img src="./assets/readme/refresh.png">
+     <li>Garbage - Deletes the password in which it was created.</li>
+     <img src="./assets/readme/bin.png">
+     <li>User can see all generated passwords in a list that is at the bottom of the site.</li>
+     <img src="./assets/readme/Multiplos.png">
+     <li>If the user clicks on the password he can save the password in a popup window that appears at the top of the website.</li>
+    <img src="./assets/readme/Popup.png">    
+
 </ul> 
-<h3 id="design">Design</h3>
+
+<h2 id="design">Design</h2>
 <ul>
     <li id="typography">Typography
         <ul>
