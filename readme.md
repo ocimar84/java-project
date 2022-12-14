@@ -8,31 +8,32 @@
 <h2>Table of Contents</h2><hr>
 
  - [Features](#features)
+ - [Design](#design)
+     - [Typography](#typography)
+     - [Color](#color)
+     - [Images](#images)
  - [Technologies](#technologies)
     - [Languages Used](#languages)
     - [Frameworks, Libraries & Programs Used](#flp)
 - [Testing](#testing)
     - [Lighthouse](#lighthouse)
+    - [Color Contrast](#color)
     - [HTML Validation](#html)
     - [CSS Validation](#css)
     - [JS Validation](#js)
-    - [Manual Testing](#manual-testing)
     - [Further Testing](#further-testing)
-    - [Fixed issues found during testing](#fixed)
-    - [Errors and warnings](#errors)
 - [Deployment](#deployment)
     - [Project Creation](#project-creation)
     - [Start Project in Gitpod](#start-project)
     - [Run Project Live Preview](#live-preview)
     - [GitHub Pages](#github-pages)
     - [Git commands](#git-commands)
-- [Future Features](#future-features)
 - [Credits](#credits)
 - [Acknowledgements](#acknowledgements)
    
 
 
-<h3 id="features">Features</h3>
+<h2 id="features">Features</h2>
 
 >LOGO
 <ul>
@@ -99,28 +100,21 @@
 <ul>
     <li id="typography">Typography
         <ul>
-            <li>All text elements on the page use the Montserrat font, making the content simple to read. If the primary font cannot load for any reason, sans-serif is applied as a backup. Additionally, the user is provided with two other options to choose from and change  between Poppins and Oswald as these are provided in the themes menu.</li>
+            <li>Poppins was the website's primary font, with sans-serif serving as a backup.</li>
         </ul>
     </li>
-    <li id="color">Colour Scheme
+    <li id="color">Color
         <ul>
-            <li>The primary colour for the application is various hues of green. The user is given an additional 3 alternatives to select from themes menu, including various blue, grey, and pink hues, to adjust the colour scheme they desire.</li>
+            <li>The primary colors chosen were black and white, as well as green to represent the password generation processes and blue for icons.</li>
         </ul>
     </li>
-    <li id="imagery"> Imagery
+    <li id="images">Images
         <ul>
-            <li>I chose a picture of a pen and paper to signify a diary and to tie in with the overall application design.</li>
+            <li>The picture of loggo I discovered it via Google and decided that it would complement the project well, matching the design as well.</li>
         </ul>
     </li>
 </ul>
 
-<h3 id="adobe-design">Adobe XD Design</h3>
-<h4 id="main-design">Main page design</h4>
-<img src="./assets/readme/todo-main-design.webp">
-<h4 id="theme-design">Theme menu design</h4>
-<img src="./assets/readme/menu-design.webp">
-<h4 id="favicon-design">Favicon design</h4>
-<img src="./assets/readme/favicon-design.webp">
 
 <h2 id="technologies">Technologies</h2><hr>
 <h3 id="languages">Languages Used</h3>
@@ -130,7 +124,7 @@
     <li><a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a></li>
 </ul>
 
-<h2 id="flp">Frameworks, Libraries & Programs Used</h2><hr>
+<h3 id="flp">Frameworks, Libraries & Programs Used</h3><hr>
 <ul>
     <li><a href="https://fonts.google.com/" target="_blank">Google Fonts</a>
         <ul>
@@ -159,27 +153,7 @@
         </ul>
     </li>
 </ul>
-<ul>
-    <li><a href="https://www.adobe.com/ie/products/photoshop-lightroom.html?gclid=Cj0KCQjwnvOaBhDTARIsAJf8eVOjH4dPSEF5YUvt-cy_GQOAe-YZNeQC-b-f9an8MbE2ZYIu9-4XgyEaAsQaEALw_wcB&mv=search&mv=search&sdid=L7NVTQ8Y&ef_id=Cj0KCQjwnvOaBhDTARIsAJf8eVOjH4dPSEF5YUvt-cy_GQOAe-YZNeQC-b-f9an8MbE2ZYIu9-4XgyEaAsQaEALw_wcB:G:s&s_kwcid=AL!3085!3!547896439650!e!!g!!adobe%20lightroom!1423511177!58810487274" target="_blank">Adobe Lightroom</a>
-        <ul>
-            <li>Adobe Lightroom was used to add color preset for all photos.</li>
-        </ul>
-    </li>
-</ul>
-<ul>
-    <li><a href="https://www.adobe.com/ie/products/photoshop.html?gclid=Cj0KCQjwnvOaBhDTARIsAJf8eVO3rRHxJnLt7dFLsz9rBsMrQoVGoDK5svXE0qzu0eMgLEzLGhT-dPgaAofzEALw_wcB&mv=search&mv=search&sdid=LZ32SYVR&ef_id=Cj0KCQjwnvOaBhDTARIsAJf8eVO3rRHxJnLt7dFLsz9rBsMrQoVGoDK5svXE0qzu0eMgLEzLGhT-dPgaAofzEALw_wcB:G:s&s_kwcid=AL!3085!3!441704131147!e!!g!!adobe%20photoshop!1423511192!58810496314" target="_blank">Adobe Photoshop</a>
-        <ul>
-            <li>Adobe Photoshop was used to resize all the images.</li>
-        </ul>
-    </li>
-</ul>
-<ul>
-    <li><a href="https://www.adobe.com/uk/products/xd.html" target="_blank">Adobe XD</a>
-        <ul>
-            <li>Adobe XD was used to create the prototype of the website.</li>
-        </ul>
-    </li>
-</ul>
+
 <ul>
     <li><a href="https://www.gitpod.io/" target="_blank">Gitpod</a>
         <ul>
@@ -187,84 +161,48 @@
         </ul>
     </li>
 </ul>
-<ul>
-    <li><a href="https://sweetalert2.github.io/" target="_blank">Sweet alert</a>
-        <ul>
-            <li>Sweet Alert was used to inform the user that the input is empty while adding a list item with an empty input.</li>
-        </ul>
-    </li>
-</ul>
+
 
 <h2 id="testing">Testing</h2><hr>
 <h3 id="lighthouse">Lighthouse</h3>
-<img src="./assets/readme/lighthouse-testing.webp">
+<img src="./assets/readme/lighthouse.png">
+
+
+<h3 id="color">Color Contrast</h3>
+<img src="./assets/readme/colortest.png">
+
+
 
 <h3 id="html">HTML Validation</h3>
-<img src="./assets/readme/html-validation.webp">
+<img src="./assets/readme/htmlcheck.png">
 
 <h3 id="css">CSS Validation</h3>
-<img src="./assets/readme/css-validation.webp">
+<img src="./assets/readme/csschecker.png">
 
 <h3 id="js">JS Validation</h3>
-<img src="./assets/readme/js-validation.webp">
+<img src="./assets/readme/javatest.png">
 
-<h3 id="manual-testing">Manual Testing</h3>
-<ul>
-    <li><a href="https://youtu.be/kciy9pvKW2o" target="_blank">Responsiveness</a>Responsiveness was tested using google chrome dev tools for desktop, tablet and mobile device.</li>
-    <li><a href="https://youtu.be/Gn2vCe2qrqE" target="_blank">External links </a>All links to external websites were tested that they are opening up on a new tab by clicking on each one of them.</li>
-    <li><a href="https://youtu.be/S8hMzuJjaI0" target="_blank">Themes button </a>The themes pop-up menu button was tested by clicking on the button and visualy checking if the menu will open up on the screen.</li>
-    <li><a href="https://youtu.be/VEtvQUg1MNE" target="_blank">Color themes selection</a>The test was done by navigating to themes menu and selecting each color theme option and visually inspect if there were changes made to color theme.</li>
-    <li><a href="https://youtu.be/xjLY78MXA5g" target="_blank">Font types selection</a>The test was done by navigating to themes menu and selecting each font type  option and visually inspect if there were changes made to font.</li>
-    <li><a href="https://youtu.be/KPDpOIN0GVU" target="_blank">Sweet alert </a>The test was conducted by trying to add a todo list item while the input was empty.</li>
-    <li><a href="https://youtu.be/cMx8Gj5ipzw" target="_blank">Adding todo item </a>The test was carried out by entering the text in the input and selecting the add todo button./li>
-    <li><a href="https://youtu.be/cJDsTsPp7EM" target="_blank">Todo list item controles </a>The test was carried out by  simply hovering over each item on the todo list. The control menu would appear as soon as the mouse was over the todo list item./li>
-    <li><a href="https://youtu.be/3y8Dv91pWrQ" target="_blank">Check button </a>The test was carried out by clicking on the check button next to each item on the todo list. When the button is clicked on the selected task, the task's style is changed to checked./li>
-    <li><a href="https://youtu.be/eINIbplCiXw" target="_blank">Edit button </a>Each task on the to-do list included an edit button, which was used to perform the test. When the user clicks the edit button on the selected task, the input for the list items toggles to enabled, enabling them to change the task's text. If they click the button again, the input changes to disabled./li>
-    <li><a href="https://youtu.be/9v_giEijWf4" target="_blank">Delete button </a>The test was carried out by clicking on the delete button next to each todo list item, which removed the todo item.</li>
-</ul>
+
 
 <h3 id="further-testing">Further Testing</h3>
 <ul>
-    <li>Responsiveness was tested using <a href="https://ui.dev/amiresponsive?url=https://eambrozas.github.io/to-do-list/" target="_blank">ui.dev</a></li>
-    <li>The Website was tested on Google Chrome, Microsoft Edge and Firefox browsers.</li>
-    <li>The website was viewed on a variety of devices such as Desktop, Laptop, Samsung Galaxy s9, Galaxy a13, Galaxy a50s.</li>
-    <li>Every link on the website was testes that it is linked correctly.</li>
-    <li>User Experience issues were tested by friends, family and slack community.</li>
-    <li>Lighthouse report was generated for the website.</li>
-    <li>HTML was checked by Markup Validation Service.</li>
-    <li>CSS was checked by CSS Validation Service.</li>
-    <li>JavaScript validator was used to validate JavaScript.</li>
-    <li>Console log was used throughout the building process to check if there were any errors.</li>
+    <li>Responsiveness was tested using <a href="https://ui.dev/amiresponsive?url=https://ocimar84.github.io/java-project/" target="_blank">ui.dev</a></li>
+    <li>Google Chrome, Microsoft Edge, and Firefox were used to test the website.</li>
+    <li>The website was viewed on a variety of devices such as Desktop, Laptop and phones.</li>
+    <li>Friends and relatives checked for user experience problems.</li>
+    <li>Throughout the construction process, console log was used to check any faults.</li>
 </ul>
-
-<h3 id="fixed">Fixed issues found during testing</h3>
-<ul>
-    <li>The background image on the website was of a high resolution, resulting in performance drop on mobile devices : Fixed by changing the size and format of the image.</li>
-    <li>The check mark was not correctly aligned with the task: To-do list item padding and the top margin for the checkmark were changed to fix the issue.</li>
-    <li>Uncaught ReferenceError: hideEditMenu is not defined at HTMLButtonElement.onclick ((index):77:65) : Fixed by removing the onclick attribute in html file on line 77 for popup close button.</li>
-</ul>
-
-<h3 id="errors">Errors and warnings</h3>
-<ul>
-    <li>These were warnings generated in css validator due to sweet alert css link that I decided to ignore as it was not cosing any issues.
-        <br><img src="./assets/readme/css-validation-warning.webp">
-    </li>
-    <li>I was receiving an undefined variable for sweet alert while checking the JS file on jshint.com and a few of other websites. But since there were no errors and everything was operating as it should, it was ignored.
-        <br><img src="./assets/readme/js-validation-warning.webp">
-    </li>
-</ul>
-
 <h2 id="deployment">Deployment</h2><hr>
 <h3 id="project-creation">Project Creation</h3>
 <ul>
     <li>
-    I used <a href="https://github.com/Code-Institute-Org/gitpod-full-template" target="_blank">Code Institute Template</a> to start the project by clicking on a 'Use this template' dropdown menu and selecting 'Create a new repository'. I gave it a repository name 'to-do-list', checked the Include all branches checkbox and clicked on a green button called 'Create repository from template' to create repository.
+    I used <a href="https://github.com/Code-Institute-Org/gitpod-full-template" target="_blank">Code Institute Template</a> to launch the project by selecting "Create a new repository" from a dropdown menu labeled "Use this template." In order to construct the repository, I gave it the name "java-project," ticked the Include all branches box, and then clicked on the green "Create repository from template" button.
     </li>
 </ul>
 
 <h3 id="start-project">Start Project in Gitpod</h3>
 <ol>
-    <li>Navigate to the Github <a href="https://github.com/EAmbrozas/to-do-list" target="_blank">repository</a>.</li>
+    <li>Navigate to the Github <a href="https://ocimar84.github.io/java-project/" target="_blank">repository</a>.</li>
     <li>Clik green 'Gitpod' button.</li>
 </ol>
 
@@ -277,7 +215,7 @@
 
 <h3 id="github-pages">GitHub Pages</h3>
 <ol>
-    <li>Navigate to <a href="https://github.com/EAmbrozas/to-do-list" target="_blank">GitHub</a> repository.</li>
+    <li>Navigate to <a href="https://github.com/ocimar84/java-project" target="_blank">GitHub</a> repository.</li>
     <li>Go to Settings > Pages.</li>
     <li>Select main branche as the source.</li>
     <li>Click 'save' button.</li>
@@ -292,23 +230,13 @@
     <li>git push - upload local repository content to a remote repository.</li>
 </ul>
 
-<h2 id="future-features">Future Features</h2><hr>
-<ul>
-    <li>Add local storage or something similar.</li>
-    <li>Add the ability to set date and time for each todo list item.</li>
-    <li>Add a drop down menu that can filter between different types of tasks. For example checked and unchecked.</li>
-</ul>
-
 <h2 id="credits">Credits</h2><hr>
 <ul>
-    <li><a href="https://webdesign.tutsplus.com/tutorials/color-schemes-with-css-variables-and-javascript--cms-36989" target="_blank">webdesign.tutsplus.com</a> On how to change the website to different colort themes.</li>
-    <li><a href="https://uiverse.io/" target="_blank">UNIVERSE</a> For nicely styled button that were used in the project.</li>
-    <li><a href="https://www.pexels.com/" target="_blank">PEXELS</a> For the image that was used in the project.</li>
-</ul>
+    <li><a href="https://www.google.com/?client=safari" target="_blank">Google</a> Logo images via google.</li>
+    <li><a href="https://www.youtube.com" target="_blank">Youtube</a> Help with several tutorials that helped me develop this site.</li>
+ </ul>
 
 <h2 id="acknowledgements">Acknowledgements</h2><hr>
 <ul>
-    <li>A very big thanks to my Mentor Ronan for valuable feedback.</li>
-    <li>My Cohort lead Kasia for support.</li>
-    <li>All the people that invested their time to review and test UI/UX of the project.</li>
-</ul>
+    <li>Thanks to Malia, my mentor, for all of her guidance and assistance.</li>
+   </ul>
